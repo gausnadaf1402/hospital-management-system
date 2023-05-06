@@ -1,0 +1,32 @@
+{% include 'hospital/base.html' %}
+{% include 'hospital/navigation.html' %}
+{% block body %}
+<h1 style="font-size:35px; margin:46px; left: 22px;position: relative;" >👨Add Appointment
+</h1>
+<div class="container">
+    <form method='post' style="background:white; margin:40px; width:40%; padding-left:32px; padding-right:32px; padding-top:24px; padding-bottom:32px;margin-bottom:16px;border-radius:10px;" class="shadow">{% csrf_token %}
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="" >Doctor Name</label>
+            <input type="text" name="doctor" class="form-control"/>
+        </div>
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="" >Patient Name</label>
+            <input type="text" name="patient" class="form-control"/>
+        </div>
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="" >Gender</label>
+            <input type="text" name="gender" class="form-control"/>
+        </div>
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="" >Date</label>
+            <input type="date" name="date" class="form-control"/>
+        </div>
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="" >Time</label>
+            <input type="time" name="time" class="form-control"/>
+        </div>
+        <button type="submit" style="position: relative;bottom: 0px;left: -1px;" class="btn btn-success">Add</button>
+    </form>  
+</div>
+{% endblock body %}
+{% include "hospital/footer.html" %}

@@ -1,0 +1,18 @@
+{% include 'hospital/navigation.html' %}
+{% block body %}
+<h1 style="font-size:35px; margin:46px; left: 22px;position: relative;" >👨Login User 
+</h1>
+<div class="container">
+    <form method='post' style="background:white; margin:40px; width:40%; padding-left:32px; padding-right:32px; padding-top:24px; padding-bottom:32px;margin-bottom:16px;border-radius:10px;" class="shadow">{% csrf_token %}
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="">Username</label>
+            <div class="shadow" style="right:698px;position:sticky;">{{form.username}}</div>
+        </div>
+        <div class="mb-2">
+            <label style="font-weight:bold;color:grey;"for="">Password</label>
+            <div class="shadow" style="right:698px;position:absolute;">{{form.password}}</div>
+        </div>
+        <button type="submit" style="position: relative;bottom: -25px;left: -9px;" class="btn btn-success">Login</button>
+    </form>  
+</div>
+{% endblock body %}

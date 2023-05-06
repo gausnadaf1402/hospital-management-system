@@ -1,0 +1,24 @@
+{% include 'hospital/base.html' %}
+<h1 class="text-center">View Doctor</h1>
+<table  id="example" class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Doctor ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Special</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for i in doc%}
+      <tr>
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.special}}</td>
+        <td><a href="{% url 'delete_doctor' i.id %}" class="btn btn-danger">Delete</a></td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
